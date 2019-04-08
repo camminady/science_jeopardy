@@ -1,0 +1,55 @@
+\documentclass{beamer}
+\usepackage{tcolorbox}
+\usepackage{ocgx}
+\usepackage{graphicx}
+\usepackage{commands}
+\usepackage{algorithm,algorithmic}
+\usepackage{animate}
+\usepackage{grffile}
+\usepackage{listings}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamersize{text margin left=0cm, text margin right=0cm}
+\tcbuselibrary{skins}
+
+% Define the Categories here !!!!!!!
+\def \firstcat {\textbf{Video Game Chars}}
+\def \secondcat {\textbf{Scientists \mbox{by Units}}}
+\def \thirdcat {\textbf{Extinct Animals}}
+\def \fourthcat {\textbf{Metric Prefix}}
+\def \fifthcat {\textbf{Computers}}
+
+
+% Define the picture for the DOUBLE Bonus here !!!
+\def \doublepic {\includegraphics[scale=0.7]{../categories/media/jeopardypics/Double_Jeopardy.png}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Set up the HOME slide
+\begin{frame}
+    \hypertarget{home}{}
+    \vspace*{-.5cm}
+    \subjects{\firstcat}{\secondcat}{\thirdcat}{\fourthcat}{\fifthcat}
+    \prizes
+\end{frame}
+
+% Usage of CreateCat
+% 	first five arguments specify, whether it is single or double
+% 	sixth argument is the path of the .tex file with the question
+% 	seventh argument is the number of the categorie
+% 	eigth argument is the corresponding tag
+
+	\CreateCat{\single}{\single}{\single}{\single}{\single}{../categories/videoGameCharacters.tex}{1}{\firstcat}
+	\CreateCat{\single}{\single}{\single}{\single}{\single}{../categories/siunitsbyscientists.tex}{2}{\secondcat}
+	\CreateCat{\single}{\single}{\single}{\single}{\double}{../categories/extinctanimals.tex}{3}{\thirdcat}
+	\CreateCat{\single}{\single}{\single}{\double}{\single}{../categories/metricprefix.tex}{4}{\fourthcat}
+	\CreateCat{\single}{\single}{\single}{\single}{\double}{../categories/computers.tex}{5}{\fifthcat}
+
+
+
+
+\end{document}
